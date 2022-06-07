@@ -1,0 +1,23 @@
+The objective of this project is to create a React app that allows the user to click a button and 
+create a magical item that can be used in 5E Dungeons and Dragons.
+
+I aim to cement my understanding of React and bring what I have been learning at School of Code to this project.
+
+A rough plan with a few simple objectives to start that.
+
+Step 1
+- Create a folder for my components, and files for each component
+- Create a title component
+- Create button component
+
+Step 1 attempted:
+Cant seem to create a button component alone, I had to add it to
+the "Heading" component. 
+Added a console.log when clicked which makes me wonder a few things;
+I want each button to do a different thing. Do I need to write a 
+response for each button? Would it be better to have (and make work)
+a seperate component for each button?
+TO COMPLETE STEP 1
+-Research buttons within react with jsx
+-Decide whether to go for component buttons or not.
+
