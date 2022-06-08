@@ -21,3 +21,18 @@ TO COMPLETE STEP 1
 -Research buttons within react with jsx
 -Decide whether to go for component buttons or not.
 
+PROGRESS MADE: (Step 1 complete)
+I have seperated out each button, it seems like the smart thing 
+to do in terms of reusability etc.
+-Added handleClick function and hooked up the Name button to generate a random 
+number when clicked
+
+Step 2
+-Currently can generate a random number when name button is clicked - do that for
+ all buttons
+-Get the random number to show in the <li></li>
+-Once the random number shows, research how to access the nameArray and display that 
+in place of the random number
+-As a note, the random number was a test to make sure the onClick was handled properly
+-More thoughts, should the <li> be a seperate component?!
+
