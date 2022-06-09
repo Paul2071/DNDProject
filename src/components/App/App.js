@@ -25,7 +25,7 @@ function handleClick () {
       <NameButton handleClick={handleClick}/>
       <WepButton />
       <DmgButton />
-      <li type="name-list"></li>
+      <li type="name-list">{nameIndex}</li>
     </div>
   
   );
