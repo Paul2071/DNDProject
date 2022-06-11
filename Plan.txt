@@ -36,3 +36,20 @@ in place of the random number
 -As a note, the random number was a test to make sure the onClick was handled properly
 -More thoughts, should the <li> be a seperate component?!
 
+
+So. Hackathon gave a lot of insight into how React works with state etc. 
+Led me to conclude that it is possible to do what I want to do, but I will
+need to plan it out properly and have a better understanding of what I am trying 
+to do at each stage.
+(as a side note, really struggled with the Hackathon despite it being
+kinda simple in its aims. Conceptually, I think I understand but I am 
+too dumb to know exactly how I can do this sort of thing).
+
+Plan 2:
+
+What files/components do I need?
+-index.js that renders App
+-app.js that takes in components and are exported in App()
+
+Component List:
+-Button Component. Triggers onlick event

@@ -1,0 +1,37 @@
+ // console.log(randomNumber);
+    // function addName(randomNumber) {
+    //   if (randomNumber === nameArray.id) {
+    //   const  newNameArray = [...nameArray]
+    //     return newNameArray;
+    //   }
+    // }
+    // const newName = nameArray.filter(addName);
+    // console.log(newName)
+
+     {nameArray.map(function (name) {
+        return <li key={nameArray.id} text={nameIndex.name}   />
+
+         {
+      id: 1,
+      name: "Havoc",
+    },
+    {
+      id: 2,
+      name: "Leaf Blight",
+    },
+    {
+      id: 3,
+      name: "Extremis",
+    },
+    {
+      id: 4,
+      name: "Caesura",
+    },
+    {
+      id: 5,
+      name: "Hunters Folly",
+    },
+    {
+      id: 6,
+      name: "Ember Stride",
+    },
