@@ -53,3 +53,14 @@ What files/components do I need?
 
 Component List:
 -Button Component. Triggers onlick event
+...
+...
+I did my usual thing here of starting a plan, getting a brain wave and trying it out.
+I got...something to work. Currently, I can click to button to add a random item to a prerendered
+list element.
+Next step is to render an li item on click with the randomName inside. Using map()
+seems to be the solution, but I cannae figure out the syntax.
+A weird bug, when I click the button I store a randomName inside a variable. I then set the state
+to the variable, but console log has them being one step behind the other - second button click
+sets the state to the first randomName generated on the first button click. The third button click
+sets the state to the second randomName generated and so on and so on...

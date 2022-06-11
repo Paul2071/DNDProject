@@ -11,7 +11,8 @@ import List from "../List/index.js";
 function App() {
   const [text, setText] = useState("");
 	const [index, setIndex] = useState(1)
-  const [arrayList, setArray] = useState([]);
+  const [arrayList, setArray] = useState([
+    ]);
     
  
 
@@ -22,28 +23,39 @@ function App() {
   // }
 
 
-  function handleClick() {
-  
+  async function  handleClick() {
+  console.log(arrayList)
   const randomName =  nameArray[Math.floor(Math.random() * nameArray.length)] 
   console.log(randomName.name)  
-  setArray(randomName.name)
+  setArray([...arrayList, randomName])
+  //setArray(randomName.name)
+   
       }
      
 		 
 
   return (
     <div className="App">
+      <div>
       <Heading />
       <NameButton
        className="name-button"
 					onClick={handleClick}
 					text={"Generate Name"}/>
       <WepButton />
-      <DmgButton />
-      <List text={arrayList}/>
-         
-            </div>
+      <DmgButton />  
+      </div>
+      <ul>
+        {arrayList.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
+
+    </div>
+    
+    
   );
+  
 }
 
 export default App;
