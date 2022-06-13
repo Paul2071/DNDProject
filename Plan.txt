@@ -64,3 +64,32 @@ A weird bug, when I click the button I store a randomName inside a variable. I t
 to the variable, but console log has them being one step behind the other - second button click
 sets the state to the first randomName generated on the first button click. The third button click
 sets the state to the second randomName generated and so on and so on...
+
+But wait! I cant stop "let me just check this..." with this. I had tried to use map() before 
+and was informed that arrayList.map is not a function. MAP ONLY WORKS ON AN ARRAY AND I WAS 
+MAKING arrayList A STRING SO I HAD TO SPREAD THE STATE AND ADD THE randomName and it worked ahhhh.
+
+SO.
+
+Step 3.
+
+-Hook up the other buttons to do the same thing. Will they need their own state? Hmm...
+-Do some CSS - watch Ninjas tutorial and other bits.
+An aside, the console.log vs state not being the same is because the setState is an async function.
+
+
+Attempt at Step 3.
+
+-CSS can wait.
+-Buttons successfully hooked up. Yeah boi. At the minute, they all render as an <li> of the same <ul>. This needs to change.
+-A possibly related issue - the <List> componenent. When I swap out the <li> for <List>, nothing renders. This seems
+to be due to dataflow issues - I am not sure what is a prop of what and where data needs to get to etc.
+
+Step 4. 
+
+-Map out the dataflow of the app. Figure out where data needs to get to and from, and the method of doing so.
+I will use miro to play around and help visualise what is going on.
+-Latest push;
+    -Deleted dmgbutton.js, weaponbutton.js and namebotton.js and consolidated them into a single Button.js and 
+    component. 
+    -Added props in App.js to customise the buttons. Ya know, like React intended.

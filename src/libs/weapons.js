@@ -13,7 +13,7 @@ export const weaponArray = [
     },
     {
       id: 3,
-      name: "Katana",
+      name: "Long Sword",
       One_hand: true,
       Two_hand: true,
     },

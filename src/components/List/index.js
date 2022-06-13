@@ -2,8 +2,8 @@ import React from "react";
 
 
 
-function List({text, key }) {
-return <li key={key} >{text}</li>;
+function List({item, key }) {
+return <li key={key} >{item}</li>;
   }
 
 

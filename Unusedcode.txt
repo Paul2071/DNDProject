@@ -34,4 +34,19 @@
     {
       id: 6,
       name: "Ember Stride",
+//add imports if decide to use below again
+      <NameButton
+          className="name-button"
+          onClick={handleClickName}
+          text={"Generate Name"}
+        />
+        <WepButton
+          className="wep-button"
+          onClick={handleClickWep}
+          text={"Generate Weapon"}
+        />
+        <DmgButton
+          className="dmg-button"
+          onClick={handleClickDmg}
+          text={"Damage Type"}
     },
