@@ -93,3 +93,16 @@ I will use miro to play around and help visualise what is going on.
     -Deleted dmgbutton.js, weaponbutton.js and namebotton.js and consolidated them into a single Button.js and 
     component. 
     -Added props in App.js to customise the buttons. Ya know, like React intended.
+
+Attempt at Step 4
+-Started to map out the dataflow, got confused but figured out the problem in the process. So a win? Maybe?
+The problem with the <List> component was simple - I was putting the prop in the middle of the component, rather
+than as an attribute of it (within the < /> tags)
+
+Latest push-
+Renamed the variables within th ebutton functions to be more semantic.
+Added another button that generates all three at once.
+
+Step 5.
+-Get each button to generate its respective output in rows next to each other, rather than a list.
+Research time - inital thoughts, have a table and push into a table? Columns?
