@@ -106,3 +106,11 @@ Added another button that generates all three at once.
 Step 5.
 -Get each button to generate its respective output in rows next to each other, rather than a list.
 Research time - inital thoughts, have a table and push into a table? Columns?
+
+Attempt at Step 5.
+
+-Done a fair amount of research, a lot of videos are and literally just people coding AT you,
+which is not helpful. No notes on how the code works or why etc.
+I think I have found one that will work out, but it is kinda late now.
+Also, learning about working on a git branch, so the latest push is going to the "columntest"
+branch with the idea being once I have figures out I do a pull request and merge ze code.

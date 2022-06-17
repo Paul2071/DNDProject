@@ -4,43 +4,34 @@ import "./App.css";
 import Button from "../Button/Button";
 import Heading from "../Heading/Heading.js";
 import List from "../List/index.js";
+import Table from "../Table/index.js";
 import { damageArray } from "./../../libs/dmg.js";
 import { nameArray } from "./../../libs/names.js";
 import { weaponArray } from "../../libs/weapons.js";
 
-
-function App({}) {
+function App() {
   const [arrayList, setArray] = useState([]);
+  
 
   function handleClickName() {
-    console.log(arrayList);
     const randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
-    console.log(randomName.name);
     setArray([...arrayList, randomName]);
   }
   function handleClickWep() {
-    console.log(arrayList);
-    const randomWep =
-      weaponArray[Math.floor(Math.random() * weaponArray.length)];
-    console.log(randomWep.name);
+    const randomWep = weaponArray[Math.floor(Math.random() * weaponArray.length)];
     setArray([...arrayList, randomWep]);
   }
   function handleClickDmg() {
-    console.log(arrayList);
-    const randomDmg =
-      damageArray[Math.floor(Math.random() * damageArray.length)];
-    console.log(randomDmg.name);
+    const randomDmg = damageArray[Math.floor(Math.random() * damageArray.length)];
     setArray([...arrayList, randomDmg]);
   }
 
-  function wepDmgType () {
+  function wepDmgType() {
     const randomDmg = damageArray[Math.floor(Math.random() * damageArray.length)];
     const randomWep = weaponArray[Math.floor(Math.random() * weaponArray.length)];
     const randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
     setArray([...arrayList, randomName, randomWep, randomDmg]);
-   
-   };
-
+  }
 
   return (
     <div className="App">
@@ -61,24 +52,31 @@ function App({}) {
           onClick={handleClickDmg}
           text={"Damage Type"}
         />
-        <Button 
-        className="all-properties"
-        onClick={wepDmgType} 
-        text={"Random Item"}
-       
-         />
-        
-       </div>
-      <ul>
+        <Button
+          className="all-properties"
+          onClick={wepDmgType}
+          text={"Random Item"}
+        />
+      </div>
+     
         {arrayList.map(function (item) {
           return (
-            <List key={item.id[Math.floor(Math.random() * 20)]} item= {item.name} ></List>
+            <List
+              key={item.id[Math.floor(Math.random() * 20)]}
+              item={item.name}
+            ></List>
           );
         })}
-        
-      </ul>
+      <Table />
     </div>
+    
   );
 }
 
 export default App;
+
+// {arrayList.map(function (item) {
+//   return (
+//     <tr key={item.id[Math.floor(Math.random() * 20)]} item= {item.name} ></tr>
+//   );
+// })} />
