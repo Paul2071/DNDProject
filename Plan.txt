@@ -148,3 +148,15 @@ Step 6
     -Create a TeeDee component that will be nested in the Table.
 
 -Think about adding another Table with additional details and another Button
+
+Attempt at Step 6.
+
+I managed it quite easily tbh. I wasnt far away from it at all, I just needed
+an example or two to make me realise how to do it. Progress!
+- Table  componenet has two child components, TableHeading and TableRow
+- Table takes in the state as a prop and hands it to the TableRow component
+- TableHeading takes in the prop of THA, THB and THC which can be defined for reusability
+- TableRow takes in the state prop of arrayList and maps over it to create its content
+
+The rest of Step 6 is creative in nature so will take some thinking about.
+CSS keeps popping up in my mind too, which requires doing a whole thing on it.

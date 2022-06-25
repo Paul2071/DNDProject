@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 11rem;
+  padding: 5rem;
   
 }
 
@@ -44,4 +44,4 @@ form td:last-child {
 
 form * {
   font-size: 28px;
-}
+} 

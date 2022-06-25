@@ -1,25 +1,17 @@
 import React from "react";
+import TableRows from "../TableRows";
+import TableHeading from "../TableHeading/TableHeading";
 
-function Table() {
+function Table({ arrayList }) {
   return (
     <div className="app-container">
-        <table>     
+      <table>
         <thead>
-            <tr>
-                <th>Weapon Type</th>
-                <th>Weapon Name</th>
-                <th>Damage Type</th>
-            </tr>
+          <TableHeading THA="Weapon Type" THB="Weapon Name" THC="Damage Type"/>
         </thead>
-        <tbody>
-            <tr>
-               <td>Long Sword</td> 
-               <td>Caesura</td> 
-               <td>Posion</td> 
-            </tr>
-        </tbody>
-        </table>
+        <TableRows arrayList={arrayList} />
+      </table>
     </div>
-  )
+  );
 }
 export default Table;
