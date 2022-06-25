@@ -136,3 +136,15 @@ tada!
 Therefore, Step 5 complete.
 
 Brief pause whilst I merge the branches.
+
+Merge successful. Woop. Brief moment of panic as I forgot to pull after the merge.
+
+Next steps?
+
+Step 6
+
+-Refactor the code. 
+    -Research how to make a Table component
+    -Create a TeeDee component that will be nested in the Table.
+
+-Think about adding another Table with additional details and another Button
