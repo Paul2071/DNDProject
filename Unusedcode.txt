@@ -50,3 +50,63 @@
           onClick={handleClickDmg}
           text={"Damage Type"}
     },
+
+      <div>
+    {list.length > 0 && (
+        <table
+        cellSpacing='0'
+        style={{ width: width, height: height, padding: '5px 10px'}}
+        >
+        <thead>
+            <tr>
+                {colNames.map((headerItem, index) => (
+                    <th key={index}>{headerItem.toUppercCase()}</th>
+    ))}
+            </tr>
+        </thead>
+        <tbody>
+            {Object.values(list).map((obj, index) => (
+                <tr key={index}>
+                    {Object.values(obj).map((value, index2) => (
+                    <td key={index2}>{value}</td>
+            ))}
+                </tr>
+            ))}
+        </tbody>
+        </table>
+          )}
+
+   </div> 
+  )
+}
+
+
+  function handleClickName() {
+    const randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
+    setArray([...arrayList, randomName]);
+  }
+  function handleClickWep() {
+    const randomWep = weaponArray[Math.floor(Math.random() * weaponArray.length)];
+    setArray([...arrayList, randomWep]);
+  }
+  function handleClickDmg() {
+    const randomDmg = damageArray[Math.floor(Math.random() * damageArray.length)];
+    setArray([...arrayList, randomDmg]);
+  }
+
+  // {arrayList.map(function (item) {
+//   return (
+//     <tr key={item.id[Math.floor(Math.random() * 20)]} item= {item.name} ></tr>
+//   );
+// })} />
+
+{
+  /* {arrayList.map(function (item) {
+      return (
+        <List
+          key={item.id[Math.floor(Math.random() * 20)]}
+          item={item.name}
+        ></List>
+      );
+    })} */
+}
