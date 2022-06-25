@@ -79,3 +79,34 @@
    </div> 
   )
 }
+
+
+  function handleClickName() {
+    const randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
+    setArray([...arrayList, randomName]);
+  }
+  function handleClickWep() {
+    const randomWep = weaponArray[Math.floor(Math.random() * weaponArray.length)];
+    setArray([...arrayList, randomWep]);
+  }
+  function handleClickDmg() {
+    const randomDmg = damageArray[Math.floor(Math.random() * damageArray.length)];
+    setArray([...arrayList, randomDmg]);
+  }
+
+  // {arrayList.map(function (item) {
+//   return (
+//     <tr key={item.id[Math.floor(Math.random() * 20)]} item= {item.name} ></tr>
+//   );
+// })} />
+
+{
+  /* {arrayList.map(function (item) {
+      return (
+        <List
+          key={item.id[Math.floor(Math.random() * 20)]}
+          item={item.name}
+        ></List>
+      );
+    })} */
+}

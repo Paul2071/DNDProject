@@ -114,3 +114,25 @@ which is not helpful. No notes on how the code works or why etc.
 I think I have found one that will work out, but it is kinda late now.
 Also, learning about working on a git branch, so the latest push is going to the "columntest"
 branch with the idea being once I have figures out I do a pull request and merge ze code.
+
+Further attempt at Step 5.
+
+Firstly, its been a hot minute! Project week last week (went amazingly well, thanks for asking) left
+me kinda wiped most days, so didnt want to dive into this project.
+Last night I had a stab at it with the video I found and it worked perfectly in the video, 
+showing exactly what I wanted to do. I spent an hour or so trying to make it work with no success.
+Today, it all came together.
+I spend a good amount of time at work ruminating on the shape of the data I was handling and how I 
+could solve the problem of unpacking the data captured by the button, putting it 
+in state, then mapping over the state
+-I changed the initial state to be an empty object within an arrayList
+-When the button is clicked, I create a new object with the properties of
+"newName", "newDmg" and "newWep"
+-the state is then immutably set to this new object
+-state is then mapped over and dot notation used to access the
+particular property and render a <td> with that info.
+tada!
+
+Therefore, Step 5 complete.
+
+Brief pause whilst I merge the branches.

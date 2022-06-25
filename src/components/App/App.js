@@ -10,73 +10,53 @@ import { nameArray } from "./../../libs/names.js";
 import { weaponArray } from "../../libs/weapons.js";
 
 function App() {
-  const [arrayList, setArray] = useState([]);
-  
-
-  function handleClickName() {
-    const randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
-    setArray([...arrayList, randomName]);
-  }
-  function handleClickWep() {
-    const randomWep = weaponArray[Math.floor(Math.random() * weaponArray.length)];
-    setArray([...arrayList, randomWep]);
-  }
-  function handleClickDmg() {
-    const randomDmg = damageArray[Math.floor(Math.random() * damageArray.length)];
-    setArray([...arrayList, randomDmg]);
-  }
+  const [arrayList, setArray] = useState([{}]);
 
   function wepDmgType() {
     const randomDmg = damageArray[Math.floor(Math.random() * damageArray.length)];
     const randomWep = weaponArray[Math.floor(Math.random() * weaponArray.length)];
     const randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
-    setArray([...arrayList, randomName, randomWep, randomDmg]);
+    const newName = randomName.name;
+    const newDmg = randomDmg.name;
+    const newWep = randomWep.name;
+    
+    setArray([{ ...arrayList, newName, newDmg, newWep }]);
+    console.log(arrayList)
   }
 
   return (
     <div className="App">
       <div>
         <Heading />
-        <Button
-          className="name-button"
-          onClick={handleClickName}
-          text={"Generate Name"}
-        />
-        <Button
-          className="wep-button"
-          onClick={handleClickWep}
-          text={"Generate Weapon"}
-        />
-        <Button
-          className="dmg-button"
-          onClick={handleClickDmg}
-          text={"Damage Type"}
-        />
+
         <Button
           className="all-properties"
           onClick={wepDmgType}
           text={"Random Item"}
         />
       </div>
-     
-        {arrayList.map(function (item) {
-          return (
-            <List
-              key={item.id[Math.floor(Math.random() * 20)]}
-              item={item.name}
-            ></List>
-          );
-        })}
-      <Table />
+      <table>
+        <thead>
+          <tr>
+            <th>Weapon Type</th>
+            <th>Weapon Name</th>
+            <th>Damage Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {arrayList.map((state) => (
+            <tr>
+              <td>{state.newWep}</td>
+              <td>{state.newName}</td>
+              <td>{state.newDmg}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-    
   );
 }
 
 export default App;
 
-// {arrayList.map(function (item) {
-//   return (
-//     <tr key={item.id[Math.floor(Math.random() * 20)]} item= {item.name} ></tr>
-//   );
-// })} />
+
